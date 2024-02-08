@@ -1,6 +1,6 @@
 'use client'; // this is a client component
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll/modules';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
@@ -30,8 +30,19 @@ const NAV_ITEMS: Array<NavItem> = [
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  console.log(currentTheme, '@');
   const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
       <div className="justify-between md:items-center md:flex">
@@ -39,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home">
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Razvan Pasca</h2>
+                <h2 className="text-2xl font-bold">Răzvan Pașca</h2>
               </div>
             </Link>
             <div className="md:hidden">
