@@ -6,27 +6,59 @@ import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 
 const projects = [
   {
-    name: 'Thankful Thoughts',
+    name: 'Gambling Lotto Application',
     description:
-      'ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.',
-    image: '/thankfulthoughts.png',
+      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
+    image: '/lotto.png',
     github: 'https://github.com/hqasmei/thankful-thoughts',
-    link: 'https://thankfulthoughts.io/',
+    link: 'https://hoteliant.com/',
   },
   {
-    name: 'PlatoIO',
-    description: 'PlatoIO is a to do list app that built using the PERN stack.',
-    image: '/platoio.png',
-    github: 'https://github.com/hqasmei/platoio',
-    link: 'https://platoio.com/register',
+    name: 'Bussinesses management application',
+    description:
+      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
+    image: '/anaplan.png',
+    github: 'https://github.com/hqasmei/thankful-thoughts',
+    link: 'https://hoteliant.com/',
+  },
+  {
+    name: 'Legacy app',
+    description:
+      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
+    image: '/cloudoflegacy.png',
+    github: 'https://github.com/hqasmei/thankful-thoughts',
+    link: 'https://hoteliant.com/',
+  },
+  {
+    name: 'Car Documents App',
+    description:
+      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
+    image: '/drumbun.png',
+    github: 'https://github.com/hqasmei/thankful-thoughts',
+    link: 'https://hoteliant.com/',
+  },
+  {
+    name: 'Hoteliant',
+    description:
+      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
+    image: '/hoteliant.png',
+    github: 'https://github.com/hqasmei/thankful-thoughts',
+    link: 'https://hoteliant.com/',
   },
   {
     name: 'Techsylvania Conference',
     description:
-      'Kator Family Photos is a photos and video digitization service in the LA area.',
+      "Techsylvania Conference in Cluj: Where global tech leaders meet for an annual exploration of cutting-edge innovations in the heart of Romania's tech hub.",
     image: '/techsylvania.png',
     github: 'https://github.com/hqasmei/katorfamilyphotos',
-    link: 'https://katorfamilyphotos.com/',
+    link: 'https://techsylvania.com/',
+  },
+  {
+    name: 'Codiax Conference',
+    description: 'PlatoIO is a to do list app that built using the PERN stack.',
+    image: '/codiax.png',
+    github: 'https://github.com/hqasmei/platoio',
+    link: 'https://codiax.co/',
   },
 ];
 
