@@ -26,7 +26,7 @@ const HeroSection = () => {
             <span className="font-semibold text-teal-600">
               Software Engineer{' '}
             </span>
-            based in Los Angeles, CA. Working towards creating software that
+            based in Romania, Europe. Working towards creating software that
             makes life easier and more meaningful.
           </p>
           <Link
@@ -40,6 +40,15 @@ const HeroSection = () => {
           >
             Projects
           </Link>
+          <a
+            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 ml-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/cv.pdf"
+            download="cv"
+          >
+            Download my CV
+          </a>
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">

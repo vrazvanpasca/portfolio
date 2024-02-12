@@ -34,7 +34,7 @@ const AboutSection = () => {
               <span className="font-bold">{'highly ambitious'}</span>,
               <span className="font-bold">{' self-motivated'}</span>, and
               <span className="font-bold">{' driven'}</span> software engineer
-              based in Los Angeles, CA.
+              based in Romania, Europe.
             </p>
             <br />
             <p>
@@ -76,7 +76,7 @@ const AboutSection = () => {
               })}
             </div>
             <Image
-              src="/hero-image.png"
+              src="/superhero.png"
               alt=""
               width={325}
               height={325}
