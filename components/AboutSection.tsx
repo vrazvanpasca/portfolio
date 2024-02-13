@@ -2,17 +2,27 @@ import React from 'react';
 import Image from 'next/image';
 
 const skills = [
-  { skill: 'HTML' },
-  { skill: 'CSS' },
   { skill: 'JavaScript' },
   { skill: 'TypeScript' },
-  { skill: 'Python' },
+  { skill: 'HTML' },
+  { skill: 'CSS' },
   { skill: 'React' },
+  { skill: 'React Native' },
   { skill: 'Next.js' },
+  { skill: 'NodeJS' },
+  { skill: 'Express' },
+  { skill: 'MySQL' },
+  { skill: 'Mongo' },
+  { skill: 'REST' },
+  { skill: 'GraphQL' },
+  { skill: 'MaterialUI' },
   { skill: 'Tailwind CSS' },
-  { skill: 'Git' },
   { skill: 'GitHub' },
-  { skill: 'Jupyter Notebooks' },
+  { skill: 'Docker' },
+  { skill: 'Figma' },
+  { skill: 'Cypress' },
+  { skill: 'Puppeteer' },
+  { skill: 'React Testing Library' },
 ];
 
 const AboutSection = () => {
@@ -40,14 +50,15 @@ const AboutSection = () => {
             <p>
               I graduated from Automation and Computer Science University
               Cluj-Napoca in 2020 with a BS in Computer Engineering and have
-              been working in the field ever since.
+              been working in the field right before. I started my career in
+              software development since 2018.
             </p>
             <br />
             <p>
               I have a wide range of hobbies and passions that keep me busy.
-              From reading, playing sports, traveling, to making YouTube videos,
-              I am always seeking new experiences and love to keep myself
-              engaged and learning new things.
+              From reading, playing sports, traveling, to cooking interesting
+              recipes, I am always seeking new experiences and love to keep
+              myself engaged and learning new things.
             </p>
             <br />
             <p>
@@ -57,7 +68,7 @@ const AboutSection = () => {
               </span>{' '}
               and that&#39;s what I strive to do, I have a passion for
               technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
+              possible. I am excited to see where my career takes me and I am
               always open to new opportunities. 🙂
             </p>
           </div>

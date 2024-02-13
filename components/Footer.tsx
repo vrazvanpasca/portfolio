@@ -27,32 +27,11 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://twitter.com/hqasmei"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineTwitter
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
-          </a>
-
-          <a
             href="https://www.linkedin.com/in/razvanpasca/"
             rel="noreferrer"
             target="_blank"
           >
             <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCQBMkSDgbxDb8usMeXmOZyA"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineYoutube
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
