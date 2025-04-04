@@ -1,28 +1,28 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const skills = [
-  { skill: 'JavaScript' },
-  { skill: 'TypeScript' },
-  { skill: 'HTML' },
-  { skill: 'CSS' },
-  { skill: 'React' },
-  { skill: 'React Native' },
-  { skill: 'Next.js' },
-  { skill: 'NodeJS' },
-  { skill: 'Express' },
-  { skill: 'MySQL' },
-  { skill: 'Mongo' },
-  { skill: 'REST' },
-  { skill: 'GraphQL' },
-  { skill: 'MaterialUI' },
-  { skill: 'Tailwind CSS' },
-  { skill: 'GitHub' },
-  { skill: 'Docker' },
-  { skill: 'Figma' },
-  { skill: 'Cypress' },
-  { skill: 'Puppeteer' },
-  { skill: 'React Testing Library' },
+  { skill: "JavaScript" },
+  { skill: "TypeScript" },
+  { skill: "HTML" },
+  { skill: "CSS" },
+  { skill: "React" },
+  { skill: "React Native" },
+  { skill: "Next.js" },
+  { skill: "NodeJS" },
+  { skill: "Express" },
+  { skill: "MySQL" },
+  { skill: "Mongo" },
+  { skill: "REST" },
+  { skill: "GraphQL" },
+  { skill: "MaterialUI" },
+  { skill: "Tailwind CSS" },
+  { skill: "GitHub" },
+  { skill: "Docker" },
+  { skill: "Figma" },
+  { skill: "Cypress" },
+  { skill: "Puppeteer" },
+  { skill: "React Testing Library" },
 ];
 
 const AboutSection = () => {
@@ -40,10 +40,10 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              Hi, my name is Razvan and I am a{' '}
-              <span className="font-bold">{'highly ambitious'}</span>,
-              <span className="font-bold">{' self-motivated'}</span>, and
-              <span className="font-bold">{' driven'}</span> software engineer
+              Hi, my name is Razvan and I am a{" "}
+              <span className="font-bold">{"highly ambitious"}</span>,
+              <span className="font-bold">{" self-motivated"}</span>, and
+              <span className="font-bold">{" driven"}</span> software engineer
               based in Romania, Europe.
             </p>
             <br />
@@ -62,10 +62,10 @@ const AboutSection = () => {
             </p>
             <br />
             <p>
-              I believe that you should{' '}
+              I believe that you should{" "}
               <span className="font-bold text-teal-500">
                 never stop growing
-              </span>{' '}
+              </span>{" "}
               and that&#39;s what I strive to do, I have a passion for
               technology and a desire to always push the limits of what is
               possible. I am excited to see where my career takes me and I am
