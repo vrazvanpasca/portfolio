@@ -11,6 +11,7 @@ const skills = [
   { skill: "Next.js" },
   { skill: "NodeJS" },
   { skill: "Express" },
+  { skill: "Nest" },
   { skill: "MySQL" },
   { skill: "Mongo" },
   { skill: "REST" },

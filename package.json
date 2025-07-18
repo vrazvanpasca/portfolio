@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "@types/node": "18.11.18",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
@@ -21,6 +20,7 @@
     "react-scroll": "^1.8.9"
   },
   "devDependencies": {
+    "@types/node": "^22.16.4",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",
     "@types/react-scroll": "^1.8.6",
