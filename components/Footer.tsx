@@ -1,45 +1,34 @@
-import React from 'react';
-import {
-  AiOutlineGithub,
-  AiOutlineTwitter,
-  AiOutlineLinkedin,
-  AiOutlineYoutube,
-} from 'react-icons/ai';
+import React from "react"
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
 
 const Footer = () => {
   return (
-    <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
-      <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
-        <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
-          © 2024 Răzvan Valentin Pașca
-          <a href="/" className="hover:underline"></a>
-        </div>
-        <div className="flex flex-row items-center justify-center space-x-2 mb-1">
+    <footer className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-between gap-4 border-t border-stone-200 py-8 text-sm text-stone-500 md:flex-row dark:border-stone-800 dark:text-stone-400">
+        <p>© {new Date().getFullYear()} Răzvan Valentin Pașca</p>
+        <div className="flex items-center gap-3">
           <a
             href="https://github.com/vrazvanpasca"
             rel="noreferrer"
             target="_blank"
+            aria-label="GitHub"
+            className="rounded-full p-1.5 transition-transform hover:-translate-y-0.5"
           >
-            <AiOutlineGithub
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+            <AiOutlineGithub size={22} />
           </a>
           <a
             href="https://www.linkedin.com/in/razvanpasca/"
             rel="noreferrer"
             target="_blank"
+            aria-label="LinkedIn"
+            className="rounded-full p-1.5 transition-transform hover:-translate-y-0.5"
           >
-            <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+            <AiOutlineLinkedin size={22} />
           </a>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

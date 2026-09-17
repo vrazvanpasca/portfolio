@@ -1,143 +1,179 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import SlideUp from './SlideUp';
-import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import SlideUp from "./SlideUp"
+import SectionHeading from "./SectionHeading"
+import { BsArrowUpRightSquare } from "react-icons/bs"
 
-const projects = [
+type Project = {
+  name: string
+  description: string
+  stack: string[]
+  image: string
+  category: string
+  link?: string
+  confidential?: boolean
+}
+
+const projects: Project[] = [
   {
-    name: 'Gambling Lotto Application',
+    name: "Lottery platform",
     description:
-      'Contributed to an international web development team, leveraging latest technologies to deliver a high-performance gambling web application for a prominent client.',
-    technologies: 'Typescript | Next 13 | React Testing Library | SCSS',
-    image: '/lotto.png',
-    github: 'https://github.com/vrazvanpasca',
+      "High-traffic consumer lottery and instant-win product for an international client. Built with a modern Next.js stack, with a strong focus on performance, reliability, and test coverage.",
+    stack: ["TypeScript", "Next.js", "React Testing Library", "SCSS"],
+    image: "/lotto.png",
+    category: "Consumer web",
+    confidential: true,
   },
   {
-    name: 'Bussinesses management application',
+    name: "Enterprise planning platform",
     description:
-      'Developed and deployed a game-changing web app for global enterprises, providing essential utilities and tools; boosted operational efficiency by automating key processes and saving an average of 200 hours per month.',
-    technologies:
-      'Typescript | React | React-Router | Cypress | React Testing Library | Docker | TILT ',
-    image: '/anaplan.png',
-    github: 'https://github.com/vrazvanpasca',
+      "Web application for global enterprises — utilities and workflows that automated core planning processes and saved teams an average of 200 hours per month.",
+    stack: [
+      "TypeScript",
+      "React",
+      "React Router",
+      "Cypress",
+      "React Testing Library",
+      "Docker",
+      "Tilt",
+    ],
+    image: "/anaplan.png",
+    category: "Enterprise",
+    confidential: true,
   },
   {
-    name: 'Legacy app',
+    name: "Cloud of Legacy",
     description:
-      'Contributed to developing an application for securely storing digital data and thoughts, unlockable only by designated heirs, ensuring a lasting legacy.',
-    technologies: 'Next.js | Javascript | Material UI | Github',
-    image: '/cloudoflegacy.png',
-    github: 'https://github.com/vrazvanpasca',
-    link: 'https://cloudoflegacy.com/',
+      "A product for storing personal digital archives and thoughts, unlockable only by designated heirs.",
+    stack: ["Next.js", "JavaScript", "Material UI"],
+    image: "/cloudoflegacy.png",
+    category: "Product",
+    link: "https://cloudoflegacy.com/",
   },
   {
-    name: 'Car Documents App',
+    name: "DrumBun",
     description:
-      'Contributed to crafting an app tailored for managing essential car documents in Romania. Streamlining the process, it ensures easy access and organization, simplifying the complexities of vehicle-related paperwork.',
-    technologies: 'React Native | Typescript | Expo | SCSS | NestJS',
-    image: '/drumbun.png',
-    github: 'https://github.com/vrazvanpasca',
-    link: 'https://drumbun.ro/',
+      "Mobile app for managing essential vehicle documents in Romania — simpler access, clearer organization, less paperwork friction.",
+    stack: ["React Native", "TypeScript", "Expo", "SCSS", "NestJS"],
+    image: "/drumbun.png",
+    category: "Mobile",
+    link: "https://drumbun.ro/",
   },
   {
-    name: 'Hoteliant',
+    name: "Hoteliant",
     description:
-      'Hoteliant creates products that help hoteliers provide a better and safer guest experience',
-    image: '/hoteliant.png',
-    technologies: 'React | Javascript | Material UI',
-    github: 'https://github.com/vrazvanpasca',
-    link: 'https://hoteliant.com/',
+      "Product suite that helps hotels deliver a better, safer guest experience.",
+    stack: ["React", "JavaScript", "Material UI"],
+    image: "/hoteliant.png",
+    category: "Hospitality",
+    link: "https://hoteliant.com/",
   },
   {
-    name: 'Techsylvania Conference',
+    name: "Techsylvania",
     description:
-      "Techsylvania Conference in Cluj: Where global tech leaders meet for an annual exploration of cutting-edge innovations in the heart of Romania's tech hub.",
-    image: '/techsylvania.png',
-    technologies: 'Wordpress | PHP | CSS',
-    github: 'https://github.com/vrazvanpasca',
-    link: 'https://techsylvania.com/',
+      "Conference website for one of Romania's major tech gatherings, where global leaders meet in Cluj-Napoca.",
+    stack: ["WordPress", "PHP", "CSS"],
+    image: "/techsylvania.png",
+    category: "Conference",
+    link: "https://techsylvania.com/",
   },
   {
-    name: 'Codiax Conference',
+    name: "Codiax",
     description:
-      'Contributed to the creation of a dynamic website for a tech conference, providing a seamless platform for information, registration, and engagement. Designed to enhance the attendee experience and showcase cutting-edge content in the world of technology.',
-    technologies: 'Wordpress | PHP | CSS',
-    image: '/codiax.png',
-    github: 'https://github.com/vrazvanpasca',
-    link: 'https://codiax.co/',
+      "Conference site covering program, registration, and attendee experience for a technology event.",
+    stack: ["WordPress", "PHP", "CSS"],
+    image: "/codiax.png",
+    category: "Conference",
+    link: "https://codiax.co/",
   },
-];
+]
 
 const ProjectsSection = () => {
   return (
-    <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
-        Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-      </h1>
-      <p className="text-left text-s italic mb-10">
-        *Please note that certain projects below are bound by confidentiality
-        agreements, restricting the disclosure of their names or providing
-        access to their repositories. Screenshots have been carefully curated to
-        exclude any sensitive information. Thank you for your understanding.
+    <section id="projects" className="scroll-mt-24 py-16 md:py-24">
+      <SectionHeading eyebrow="Selected work">Projects</SectionHeading>
+      <p className="mx-auto mb-12 max-w-2xl text-center text-sm leading-relaxed text-stone-500 dark:text-stone-400">
+        A few engagements are under NDA. Client names and repositories are
+        omitted, and screenshots exclude sensitive information.
       </p>
 
-      <div className="flex flex-col space-y-28">
+      <div className="flex flex-col gap-24">
         {projects.map((project, idx) => {
+          const image = (
+            <Image
+              src={project.image}
+              alt={`${project.name} preview`}
+              width={1200}
+              height={800}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          )
+
           return (
-            <div key={idx}>
-              <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className=" md:w-1/2">
-                    <Link href={project.link || '/'}>
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70"
-                      />
-                    </Link>
+            <div key={project.name}>
+              <SlideUp offset="0px 0px -80px 0px">
+                <article
+                  className={`flex flex-col items-center gap-8 md:flex-row md:gap-12 ${
+                    idx % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-stone-200 bg-stone-100 shadow-sm md:w-1/2 dark:border-stone-800 dark:bg-stone-900">
+                    {project.link ? (
+                      <Link
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        {image}
+                      </Link>
+                    ) : (
+                      image
+                    )}
                   </div>
-                  <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+
+                  <div className="w-full md:w-1/2">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-700 dark:text-teal-400">
+                      {project.category}
+                      {project.confidential ? " · Confidential" : ""}
+                    </p>
+                    <h3 className="mt-2 text-2xl font-semibold tracking-tight text-stone-900 md:text-3xl dark:text-stone-50">
+                      {project.name}
+                    </h3>
+                    <p className="mt-4 text-base leading-relaxed text-stone-600 dark:text-stone-300">
                       {project.description}
                     </p>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
-                      <span className="text-decoration-line: underline;">
-                        Technologies:
-                      </span>{' '}
-                      {project.technologies || ''}
-                    </p>
-                    <div className="flex flex-row align-bottom space-x-4">
-                      {project.github && (
-                        <Link href={project.github} target="_blank">
-                          <BsGithub
-                            size={30}
-                            className="hover:-translate-y-1 transition-transform cursor-pointer"
-                          />
-                        </Link>
-                      )}
-                      {project.link && (
-                        <Link href={project.link} target="_blank">
-                          <BsArrowUpRightSquare
-                            size={30}
-                            className="hover:-translate-y-1 transition-transform cursor-pointer"
-                          />
-                        </Link>
-                      )}
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600 dark:bg-stone-900 dark:text-stone-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
+                    {project.link ? (
+                      <Link
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition-colors hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300"
+                      >
+                        Visit site
+                        <BsArrowUpRightSquare size={16} />
+                      </Link>
+                    ) : null}
                   </div>
-                </div>
+                </article>
               </SlideUp>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectsSection;
+export default ProjectsSection

@@ -1,32 +1,42 @@
-"use client" // this is a client component
+"use client"
 
 import React, { useEffect, useRef, ReactNode } from "react"
+
 interface Props {
   offset?: string
   children?: ReactNode
-  // any props that come into the component
 }
 
 export default function SlideUp({ children, offset = "0px" }: Props) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    const reveal = (el: Element) => {
+      el.classList.remove("opacity-0")
+      el.classList.add("animate-slideUpCubiBezier")
+      observer.unobserve(el)
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("opacity-0")
-            entry.target.classList.add("animate-slideUpCubiBezier")
+          if (
+            entry.isIntersecting ||
+            entry.boundingClientRect.top < window.innerHeight
+          ) {
+            reveal(entry.target)
           }
         })
       },
-      { rootMargin: offset }
+      { rootMargin: offset, threshold: 0.15 }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-  }, [ref])
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [offset])
 
   return (
     <div ref={ref} className="relative opacity-0">

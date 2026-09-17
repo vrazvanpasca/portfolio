@@ -1,8 +1,14 @@
-"use client"
 import "../styles/globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import { ThemeProvider } from "next-themes"
+import Providers from "@/components/Providers"
+import { Plus_Jakarta_Sans } from "@next/font/google"
+
+const sans = Plus_Jakarta_Sans({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-sans",
+})
 
 export default function RootLayout({
   children,
@@ -10,18 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={sans.variable} suppressHydrationWarning>
       <head />
-      <body className="dark:bg-stone-900">
-        <ThemeProvider enableSystem={true} attribute="class">
+      <body className={`${sans.className} bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100`}>
+        <Providers>
           <Navbar />
           {children}
           <Footer />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )

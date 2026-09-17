@@ -5,13 +5,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
+      screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440px" },
+      fontFamily: {
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       animation: {
         fadeIn: "fadeIn 1.5s",
         bounce:
@@ -32,8 +32,8 @@ module.exports = {
           to: { opacity: 1 },
         },
         slideUp: {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
+          from: { transform: "translateY(24px)", opacity: 0 },
+          to: { transform: "translateY(0)", opacity: 1 },
         },
         bounce: {
           from: { transform: "translateY(10px)" },
